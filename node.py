@@ -1,25 +1,23 @@
 class Node:
-  """ Node Class: used to represent data structures like linked list, tree, ... etc """
+    """ Node Class: used to represent data structures like linked list, tree, ... etc """
 
-  def __init__(self, initData):
-    """ Construct node with value and set next to none """
-    self.data = initData
-    self.next = None
+    def __init__(self, init_data):
+        """ Construct node with value and set next to none """
+        self.data = init_data
+        self.next = None
 
-  def getData(self):
-    """ Returns the value of the node """
-    return self.data
+    def get_data(self):
+        """ Returns the value of the node """
+        return self.data
 
-  def getNext(self):
-    """ Returns the pointer that refer to the next node """
-    return self.next
+    def get_next(self):
+        """ Returns the pointer that refer to the next node """
+        return self.next
 
-  def setData(self, newData):
-    """ Changes the value of the node data """
-    self.data = newData
+    def set_data(self, new_data):
+        """ Changes the value of the node data """
+        self.data = new_data
 
-
-  def setNext(self, newNext):
-    """ Changes what the node refrence for """
-    self.next = newNext
-
+    def set_next(self, new_next):
+        """ Changes what the node reference for """
+        self.next = new_next
