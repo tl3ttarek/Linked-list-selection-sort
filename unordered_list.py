@@ -20,7 +20,7 @@ class UnorderedList:
     temp = Node(newItem)
     temp.setNext(self.head)
     self.head = temp
-    self.length += 1;
+    self.length += 1
     
   def getLength(self):
     """ Returns the length of your list """
