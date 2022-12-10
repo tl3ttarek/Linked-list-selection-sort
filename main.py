@@ -24,7 +24,7 @@ def linked_list_selection_sort(alist):
                 mn = cursor
             cursor = cursor.getNext()
 
-        # Swaping the elements
+        # Swapping the elements
         temp = mn.getData()
         mn.setData(pointer.getData())
         pointer.setData(temp)

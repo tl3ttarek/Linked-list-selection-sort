@@ -19,5 +19,5 @@ class Node:
         self.data = newData
 
     def setNext(self, newNext):
-        """ Changes what the node refrence for """
+        """ Changes what the node reference for """
         self.next = newNext
