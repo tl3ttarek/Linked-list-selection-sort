@@ -3,6 +3,26 @@ from random import randrange
 from time import time
 
 
+def calc_time_linked_list(fun):
+    def nested_fun(my_list):
+        start = time()
+        fun(my_list)
+        end = time()
+        print(f"Total Time for linked list :{end - start:.9f} sec")
+
+    return nested_fun
+
+
+def calc_time_normal_list(fun):
+    def nested_fun(my_list):
+        start = time()
+        fun(my_list)
+        end = time()
+        print(f"Total Time for normal list :{end - start:.9f} sec")
+
+    return nested_fun
+
+
 def random_linked_list(n):
     """ Generate random linked list that has the length of n """
     alist = UnorderedList()
@@ -11,25 +31,26 @@ def random_linked_list(n):
     return alist
 
 
+@calc_time_linked_list
 def linked_list_selection_sort(alist):
     """ Operate selection sort on a linked list """
-    length = alist.getLength()
-    pointer = alist.getHead()
+    length = alist.get_length()
+    pointer = alist.get_head()
 
     for i in range(length - 1):
         mn = pointer
-        cursor = pointer.getNext()
+        cursor = pointer.get_next()
         while cursor is not None:
-            if cursor.getData() < mn.getData():
+            if cursor.get_data() < mn.get_data():
                 mn = cursor
-            cursor = cursor.getNext()
+            cursor = cursor.get_next()
 
         # Swapping the elements
-        temp = mn.getData()
-        mn.setData(pointer.getData())
-        pointer.setData(temp)
+        temp = mn.get_data()
+        mn.set_data(pointer.get_data())
+        pointer.set_data(temp)
 
-        pointer = pointer.getNext()
+        pointer = pointer.get_next()
 
 
 def generate_normal_list(n):
@@ -40,6 +61,7 @@ def generate_normal_list(n):
     return alist
 
 
+@calc_time_normal_list
 def normal_list_selection_sort(alist):
     """ Operate selection sort on a normal list """
     for i in range(len(alist) - 1):
@@ -57,27 +79,13 @@ def normal_list_selection_sort(alist):
 if __name__ == "__main__":
     # Generate random linked list
     linked_list = random_linked_list(100)
-
-    print("List before sorting:")
-    linked_list.printList()
-    print()
-    begin_time = time()
-
-    # Sorting operation
+    print("="*70)
+    print("Linked List before sorting:")
+    linked_list.print_list()
+    print("="*70)
+    print("Linked List after sorting:")
     linked_list_selection_sort(linked_list)
-    end_time = time()
-
-    print("List after sorting:")
-    linked_list.printList()
-    print()
-
-    # Calculating time of the operation
-    print(f"Total time of linked list selection sort: {end_time - begin_time:.9f} sec")
-
-    # Doing the same operation on normal list
+    linked_list.print_list()
+    print("="*70)
     normal_list = generate_normal_list(100)
-    begin_time = time()
     normal_list_selection_sort(normal_list)
-    end_time = time()
-
-    print(f"Total time of normal list selection sort: {end_time - begin_time:.9f} sec")

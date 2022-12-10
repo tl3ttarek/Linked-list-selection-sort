@@ -9,21 +9,21 @@ class UnorderedList:
         self.head = None
         self.length = 0
 
-    def isEmpty(self):
+    def is_empty(self):
         """ Checks if the linked list is empty """
         return self.head is None
 
-    def getHead(self):
+    def get_head(self):
         return self.head
 
-    def add(self, newItem):
+    def add(self, new_item):
         """ Adds new item to your list """
-        temp = Node(newItem)
-        temp.setNext(self.head)
+        temp = Node(new_item)
+        temp.set_next(self.head)
         self.head = temp
         self.length += 1
 
-    def getLength(self):
+    def get_length(self):
         """ Returns the length of your list """
         # count = 0
         # current = self.head
@@ -37,9 +37,9 @@ class UnorderedList:
         """ Search for a specific item in the list """
         current = self.head
         while current is not None:
-            if current.getData() == item:
+            if current.get_data() == item:
                 return True
-            current = current.getNext()
+            current = current.get_next()
         return False
 
     def remove(self, item):
@@ -48,28 +48,28 @@ class UnorderedList:
         current = self.head
 
         while current is not None:
-            if current.getData() == item:
+            if current.get_data() == item:
                 break
             else:
                 previous = current
-                current = current.getNext()
+                current = current.get_next()
 
         if previous is None:
-            self.head = current.getNext()
+            self.head = current.get_next()
             self.length -= 1
         else:
             try:
-                previous.setNext(current.getNext())
+                previous.set_next(current.get_next())
                 self.length -= 1
             except:
                 print("The element you want to remove is not found.")
 
-    def printList(self):
+    def print_list(self):
         """ Prints the content of the list """
         current = self.head
         while current is not None:
-            print('(', current.getData(), ') ', end="=> ", sep="")
-            current = current.getNext()
+            print('(', current.get_data(), ') ', end="=> ", sep="")
+            current = current.get_next()
         print("None")
 
 
@@ -81,4 +81,4 @@ if __name__ == "__main__":
     alist.add(4)
     alist.add(5)
     alist.remove(6)
-    alist.printList()
+    alist.print_list()
