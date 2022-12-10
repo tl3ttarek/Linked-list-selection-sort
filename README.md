@@ -61,3 +61,9 @@ alist = []
     normal_list_selection_sort(normal_list)
     normal_list_time = time() - begin_time
 ```
+<br/>
+
+## TEAM 6 members :
+- `Leader` Talaat Tarek  
+- Hazem Elakbawy
+- .....
