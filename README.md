@@ -63,7 +63,21 @@ alist = []
 ```
 <br/>
 
-## TEAM 6 members :
+## TEAM members :
 - `Leader` Talaat Tarek  
 - Hazem Elakbawy
-- .....
+- Abdulrahman Khattab
+- Moataz Eleryan
+- Elsayed Abdelmongey
+- Mostafa Khalil
+- Mahmoud Feshar
+- Doha Ali
+- Habiba Nezar
+- Ahmed Abdallah
+- Ayman hussein
+- Abdallah Yousry
+- Mohamed Mosalam
+- Mohamed Elashry
+- Mohmoud Elkholy
+- Mostafa Elbebany
+- Nader Magdy
