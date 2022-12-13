@@ -72,4 +72,4 @@ if __name__ == "__main__":
     normal_list_selection_sort(normal_list)
     normal_list_time = time() - begin_time
     print(f"Total time for linked list : {linked_list_time:.9f}")
-    print(f"Total time for norma list of (same size) : {normal_list_time:.9f}")
+    print(f"Total time for normal list of (same size) : {normal_list_time:.9f}")
